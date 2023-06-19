@@ -19,13 +19,13 @@ function QuestionForm(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch("http:localhost:4000/questions",{
+    fetch("http://localhost:4000/questions", {
       method: "POST",
-      headers: {
+      headers:{
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        prompt:formData.prompt,
+      body:JSON.stringify({
+        prompt: formData.prompt,
         answers: [
           formData.answer1,
           formData.answer2,
